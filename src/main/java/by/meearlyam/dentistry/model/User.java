@@ -1,18 +1,12 @@
 package by.meearlyam.dentistry.model;
 
-import by.meearlyam.dentistry.model.audit.DateAudit;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "users", uniqueConstraints = {
-        @UniqueConstraint(columnNames = {
-                "login"
-        })
-})
-public class User extends DateAudit {
+@Table(name = "users")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -34,18 +28,18 @@ public class User extends DateAudit {
     private String password;
 
     @NotBlank
-    private boolean isAdmin;
+    private Role role;
 
     public User() {
 
     }
 
-    public User(String name, String surname, String login, String password, boolean isAdmin) {
+    public User(String name, String surname, String login, String password, Role role) {
         this.name = name;
         this.surname = surname;
         this.login = login;
         this.password = password;
-        this.isAdmin = isAdmin;
+        this.role = role;
     }
 
     public Long getId() {
@@ -88,11 +82,11 @@ public class User extends DateAudit {
         this.password = password;
     }
 
-    public boolean getIsAdmin() {
-        return isAdmin;
+    public Role getIsAdmin() {
+        return role;
     }
 
-    public void setIsAdmin(boolean isAdmin) {
-        this.isAdmin = isAdmin;
+    public void setIsAdmin(Role role) {
+        this.role = role;
     }
 }
