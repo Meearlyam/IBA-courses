@@ -1,7 +1,6 @@
 package by.meearlyam.dentistry.repository;
 
 import by.meearlyam.dentistry.model.User;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
