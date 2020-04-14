@@ -13,21 +13,26 @@ public class User {
 
     @NotBlank
     @Size(max = 30)
+    @Column(name = "name")
     private String name;
 
     @NotBlank
     @Size(max = 30)
+    @Column(name = "surname")
     private String surname;
 
     @NotBlank
     @Size(max = 20)
+    @Column(name = "login")
     private String login;
 
     @NotBlank
-    @Size(max = 20)
+    @Size(max = 50)
+    @Column(name = "password")
     private String password;
 
     @NotBlank
+    @Column(name = "role")
     private Role role;
 
     public User() {
