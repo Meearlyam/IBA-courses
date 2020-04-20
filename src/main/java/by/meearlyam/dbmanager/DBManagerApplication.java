@@ -1,4 +1,4 @@
-package by.meearlyam.dentistry;
+package by.meearlyam.dbmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,10 +10,10 @@ import java.util.TimeZone;
 
 @SpringBootApplication
 @EntityScan(basePackageClasses = {
-		DentistryApplication.class,
+		DBManagerApplication.class,
 		Jsr310JpaConverters.class
 })
-public class DentistryApplication {
+public class DBManagerApplication {
 
 	@PostConstruct
 	void init() {
@@ -21,7 +21,7 @@ public class DentistryApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(DentistryApplication.class, args);
+		SpringApplication.run(DBManagerApplication.class, args);
 	}
 
 }

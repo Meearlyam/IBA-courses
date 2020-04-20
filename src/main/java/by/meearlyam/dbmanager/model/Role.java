@@ -1,4 +1,4 @@
-package by.meearlyam.dentistry.model;
+package by.meearlyam.dbmanager.model;
 
 public enum Role {
     USER,
